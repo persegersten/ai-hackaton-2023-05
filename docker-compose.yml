@@ -1,7 +1,10 @@
 version: "3.9"
 services:
   jupyter:
-    build: .
+    build: 
+      context: .
+      args:
+        - FEATYRE_REPO_PATH=my_test_feature_repo
     ports:
       - "8888:8888"
     volumes:
